@@ -1,92 +1,70 @@
-# File Processing Agent for Live Agent Studio
+# File Processing Agent
 
-Author: [Cole Medin](https://www.youtube.com/@ColeMedin)
+> FastAPI agent that handles file uploads, stores content with conversation history, and integrates files into AI context.
 
-This is a specialized Python FastAPI agent that demonstrates how to handle file uploads in the Live Agent Studio. It shows how to process, store, and leverage file content in conversations with AI models.
+Part of [ChenAI Agents](https://github.com/MadhavanAR/Agents) — open-source AI agent templates by the [ChenAI Community](https://www.linkedin.com/company/chenai/).
 
-This agent builds upon the foundation laid out in [`~sample-python-agent~/sample_supabase_agent.py`](../~sample-python-agent~/sample_supabase_agent.py), extending it with file handling capabilities.
+**Author:** [Cole Medin](https://www.youtube.com/@ColeMedin)
 
-Not all agents need file handling which is why the sample Python agent is kept simple and this one is available to help you build agents with file handling capabilities. The Live Agent Studio has file uploading built in and the files are sent in the exact format shown in this agent.
+Built on the [Python Agent Template](../templates/python-agent/) with file handling capabilities.
 
-## Overview
+## Features
 
-This agent extends the base Python agent template to showcase file handling capabilities:
 - Process uploaded files in base64 format
-- Store file content with conversation history
+- Store file content with conversation history in Supabase
 - Integrate file content into AI model context
-- Maintain conversation continuity with file references
 - Handle multiple files in a single conversation
 
 ## Prerequisites
 
-- Python 3.11 or higher
-- pip (Python package manager)
-- Supabase account (for conversation storage)
+- Python 3.11+
+- Supabase account
 - OpenAI API key
-- Basic understanding of:
-  - FastAPI and async Python
-  - Base64 encoding/decoding
-  - OpenAI API
-  - Supabase
 
-## Core Components
+## Quick Start
 
-### 1. File Processing
+### 1. Clone the repository
 
-The agent includes robust file handling:
-- Base64 decoding of uploaded files
-- Text extraction and formatting
-- Persistent storage of file data
-- Context integration for AI responses
+```bash
+git clone https://github.com/MadhavanAR/Agents.git
+cd Agents/file-agent
+```
 
-### 2. Conversation Management
+### 2. Install dependencies
 
-Built on the sample Supabase agent template, this agent adds:
-- File metadata storage with messages
-- File content integration in conversation history
-- Contextual file reference handling
+```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-### 3. AI Integration
+### 3. Configure environment
 
-Seamless integration with OpenAI's GPT models:
-- File content as conversation context
-- Maintained context across multiple messages
-- Intelligent responses based on file content
+```bash
+cp .env.example .env
+```
 
-## Setup Instructions
+Edit `.env`:
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up environment variables in `.env`:
-   ```
-   SUPABASE_URL=your_supabase_url
-   SUPABASE_SERVICE_KEY=your_supabase_key
-   API_BEARER_TOKEN=your_bearer_token
-   OPENAI_API_KEY=your_openai_key
-   ```
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_SERVICE_KEY=your_supabase_key
+API_BEARER_TOKEN=your_bearer_token
+OPENAI_API_KEY=your_openai_key
+```
 
-## Running the Agent
+### 4. Run
 
-Start the agent with:
 ```bash
 python file_agent.py
 ```
 
-The agent will be available at `http://localhost:8001`.
+Available at `http://localhost:8001`.
 
 ## API Usage
 
-Send requests to `/api/file-agent` with:
-- `query`: Your question or prompt
-- `files`: Array of file objects with:
-  - `name`: Filename
-  - `type`: MIME type
-  - `base64`: Base64-encoded file content
+Send POST requests to `/api/file-agent`:
 
-Example request:
 ```json
 {
   "query": "What does this file contain?",
@@ -101,6 +79,18 @@ Example request:
 }
 ```
 
+## Files
+
+| File | Description |
+|------|-------------|
+| `file_agent.py` | FastAPI agent with file handling |
+| `requirements.txt` | Python dependencies |
+| `.env.example` | Environment variable template |
+
 ## Contributing
 
-This agent is part of the oTTomator agents collection. For contributions or issues, please refer to the main repository guidelines.
+Contributions are welcome! See [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+## License
+
+Licensed under the [MIT License](../LICENSE).

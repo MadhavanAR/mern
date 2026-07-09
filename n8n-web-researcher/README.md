@@ -1,22 +1,22 @@
-# Small Business Researcher Agent
+# Advanced Web Researcher Agent
 
-> Research small business ideas by analyzing Reddit discussions from r/smallbusiness.
+> Deep web research with Brave Search API and AI summarization via n8n.
 
 Part of [ChenAI Agents](https://github.com/MadhavanAR/Agents) — open-source AI agent templates by the [ChenAI Community](https://www.linkedin.com/company/chenai/).
 
-**Author:** [Zubair Trabzada](https://www.youtube.com/@AI-GPTWorkshop)
+**Author:** [Cole Medin](https://www.youtube.com/@ColeMedin)
 
 ## Features
 
-- Searches r/smallbusiness for relevant discussions
-- Filters posts by upvotes, content length, and recency (180 days)
-- AI-powered analysis and actionable insights
-- Data-driven recommendations from real business owners
+- Brave Search API for high-quality search results
+- Automatic article summarization
+- Source attribution and relevance filtering
+- Complex multi-source research queries
 
 ## Prerequisites
 
 - [n8n](https://n8n.io/) instance
-- Reddit API credentials
+- Brave Search API key
 - OpenAI API key
 
 ## Quick Start
@@ -25,43 +25,39 @@ Part of [ChenAI Agents](https://github.com/MadhavanAR/Agents) — open-source AI
 
 ```bash
 git clone https://github.com/MadhavanAR/Agents.git
-cd Agents/small-business-researcher
+cd Agents/n8n-web-researcher
 ```
 
 ### 2. Import the workflow
 
 1. Open your n8n instance
 2. Go to **Workflows** → **Import from File**
-3. Select `Reddit_Small_Business_Researcher.json`
+3. Select `Advanced_Web_Researcher.json`
 
 ### 3. Configure credentials
 
 | Credential | Purpose |
 |------------|---------|
-| Reddit API | Access r/smallbusiness |
-| OpenAI API | Content analysis |
+| Brave Search API | Web search |
+| OpenAI API | Summarization and analysis |
 | Header Auth | Webhook authentication (optional) |
 
 ### 4. Activate the workflow
 
 Enable the workflow and use the webhook URL for API requests.
 
-## Example
+## Use Cases
 
-**Input:**
-```json
-{
-  "query": "I want to start a mobile car detailing business"
-}
-```
-
-**Output:** Market demand, startup costs, challenges, success factors, and recommendations based on real Reddit discussions.
+- Deep topic research and fact verification
+- Market and competitive analysis
+- Cross-source information synthesis
+- Technical documentation search
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `Reddit_Small_Business_Researcher.json` | n8n workflow |
+| `Advanced_Web_Researcher.json` | n8n workflow |
 
 ## Contributing
 

@@ -1,22 +1,21 @@
-# Small Business Researcher Agent
+# Content Creator Agent
 
-> Research small business ideas by analyzing Reddit discussions from r/smallbusiness.
+> Generate engaging, research-backed content for LinkedIn, X, and blog posts.
 
 Part of [ChenAI Agents](https://github.com/MadhavanAR/Agents) — open-source AI agent templates by the [ChenAI Community](https://www.linkedin.com/company/chenai/).
 
-**Author:** [Zubair Trabzada](https://www.youtube.com/@AI-GPTWorkshop)
+**Author:** [Nate Herkelman](https://www.youtube.com/@nateherk)
 
 ## Features
 
-- Searches r/smallbusiness for relevant discussions
-- Filters posts by upvotes, content length, and recency (180 days)
-- AI-powered analysis and actionable insights
-- Data-driven recommendations from real business owners
+- Web research on specified topics
+- Platform-specific content generation (LinkedIn, X, blog)
+- Audience-aware messaging and multi-platform strategies
+- SEO-friendly blog post structure
 
 ## Prerequisites
 
 - [n8n](https://n8n.io/) instance
-- Reddit API credentials
 - OpenAI API key
 
 ## Quick Start
@@ -25,43 +24,38 @@ Part of [ChenAI Agents](https://github.com/MadhavanAR/Agents) — open-source AI
 
 ```bash
 git clone https://github.com/MadhavanAR/Agents.git
-cd Agents/small-business-researcher
+cd Agents/social-content-creator
 ```
 
 ### 2. Import the workflow
 
 1. Open your n8n instance
 2. Go to **Workflows** → **Import from File**
-3. Select `Reddit_Small_Business_Researcher.json`
+3. Select `Content_Creator.json`
 
 ### 3. Configure credentials
 
 | Credential | Purpose |
 |------------|---------|
-| Reddit API | Access r/smallbusiness |
-| OpenAI API | Content analysis |
+| OpenAI API | Content generation |
 | Header Auth | Webhook authentication (optional) |
 
 ### 4. Activate the workflow
 
 Enable the workflow and use the webhook URL for API requests.
 
-## Example
+## Use Cases
 
-**Input:**
-```json
-{
-  "query": "I want to start a mobile car detailing business"
-}
-```
-
-**Output:** Market demand, startup costs, challenges, success factors, and recommendations based on real Reddit discussions.
+- Social media marketing across LinkedIn and X
+- Blog content creation with research and citations
+- Audience-targeted content strategies
+- Industry trend analysis and talking points
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `Reddit_Small_Business_Researcher.json` | n8n workflow |
+| `Content_Creator.json` | n8n workflow |
 
 ## Contributing
 

@@ -27,51 +27,45 @@
 
 ## About
 
-**ChenAI Agents** is an open-source collection of production-ready AI agent templates built by the [ChenAI Community](https://www.linkedin.com/company/chenai/). Each agent is a self-contained project you can clone, configure, and run — whether you need web research, GitHub analysis, document RAG, n8n automation, or content creation.
+**ChenAI Agents** is an open-source collection of production-ready AI agent templates built by the [ChenAI Community](https://www.linkedin.com/company/chenai/). Each agent is a self-contained project you can clone, configure, and run.
 
-Use these agents as:
-
-- **Starting points** for your own AI products and internal tools
-- **Reference implementations** for Pydantic AI, n8n, FastAPI, and Supabase patterns
-- **Learning resources** for building intelligent automation
-
-Contributions, issues, and stars are welcome. This project grows through community collaboration.
+Contributions, issues, and stars are welcome.
 
 ---
 
 ## Agents
 
-### Pydantic AI Agents (Python)
+### Python Agents
 
-| Agent | Description | Docs |
-|-------|-------------|------|
-| [GitHub Agent](./pydantic-github-agent/) | Analyze GitHub repos — structure, files, and features via the GitHub API | [README](./pydantic-github-agent/README.md) |
-| [Advanced Web Researcher](./pydantic-ai-advanced-researcher/) | Web search agent powered by Brave Search API | [README](./pydantic-ai-advanced-researcher/README.md) |
-| [Documentation Crawler & RAG](./crawl4AI-agent/) | Crawl docs, embed in Supabase, and answer questions with RAG | [README](./crawl4AI-agent/README.md) |
-| [File Agent](./file-agent/) | FastAPI agent with file upload, storage, and AI context integration | [README](./file-agent/README.md) |
+| Folder | Description | Docs |
+|--------|-------------|------|
+| [github-agent](./github-agent/) | Analyze GitHub repos — structure, files, and features | [README](./github-agent/README.md) |
+| [web-researcher](./web-researcher/) | Web search with Brave API (Pydantic AI) | [README](./web-researcher/README.md) |
+| [doc-rag-agent](./doc-rag-agent/) | Crawl docs, embed in Supabase, answer with RAG | [README](./doc-rag-agent/README.md) |
+| [file-agent](./file-agent/) | FastAPI agent with file upload and AI context | [README](./file-agent/README.md) |
 
 ### n8n Workflow Agents
 
-| Agent | Description | Docs |
-|-------|-------------|------|
-| [n8n Expert](./n8n-expert/) | Find and understand n8n automation workflows from natural language | [README](./n8n-expert/README.md) |
-| [GitHub Assistant](./n8n-github-assistant/) | GitHub-focused automation assistant | [README](./n8n-github-assistant/README.md) |
-| [Advanced Web Researcher](./advanced-web-researcher/) | Deep web research with Brave Search and AI summarization | [README](./advanced-web-researcher/README.md) |
-| [YouTube Video Summarizer](./youtube-video-summarizer/) | Summarize YouTube videos and chat about their content | [README](./youtube-video-summarizer/README.md) |
-| [Tech Stack Expert](./tech-stack-expert/) | Get recommendations and guidance on technology choices | [README](./tech-stack-expert/README.md) |
-| [Local AI Expert](./local-ai-expert/) | Guidance on running AI models locally | [README](./local-ai-expert/README.md) |
-| [bolt.diy Expert](./bolt.diy-expert/) | Expert assistant for bolt.diy development | [README](./bolt.diy-expert/README.md) |
-| [Content Creator](./linkedin-x-blog-content-creator/) | Generate LinkedIn, X, and blog content | [README](./linkedin-x-blog-content-creator/README.md) |
-| [Small Business Researcher](./small-business-researcher/) | Research small business topics from Reddit discussions | [README](./small-business-researcher/README.md) |
+| Folder | Description | Docs |
+|--------|-------------|------|
+| [n8n-workflow-finder](./n8n-workflow-finder/) | Find n8n automation workflows from natural language | [README](./n8n-workflow-finder/README.md) |
+| [github-assistant](./github-assistant/) | GitHub repository exploration assistant | [README](./github-assistant/README.md) |
+| [n8n-web-researcher](./n8n-web-researcher/) | Deep web research with Brave Search | [README](./n8n-web-researcher/README.md) |
+| [youtube-summarizer](./youtube-summarizer/) | Summarize YouTube videos and chat about content | [README](./youtube-summarizer/README.md) |
+| [tech-stack-advisor](./tech-stack-advisor/) | Recommend tech stacks for full-stack apps | [README](./tech-stack-advisor/README.md) |
+| [local-llm-advisor](./local-llm-advisor/) | Guidance on running LLMs locally | [README](./local-llm-advisor/README.md) |
+| [bolt-diy-advisor](./bolt-diy-advisor/) | Expert assistant for bolt.diy | [README](./bolt-diy-advisor/README.md) |
+| [social-content-creator](./social-content-creator/) | Generate LinkedIn, X, and blog content | [README](./social-content-creator/README.md) |
+| [small-business-researcher](./small-business-researcher/) | Research business ideas from Reddit | [README](./small-business-researcher/README.md) |
 
-### Templates & Integrations
+### Templates & Infrastructure
 
-| Project | Description | Docs |
-|---------|-------------|------|
-| [Sample Python Agent](./~sample-python-agent~/) | Minimal FastAPI + Supabase agent template | [README](./~sample-python-agent~/README.md) |
-| [Sample n8n Agent](./~sample-n8n-agent~/) | Base n8n agent workflow template | [README](./~sample-n8n-agent~/README.md) |
-| [Base Python Docker](./base_python_docker/) | Docker image for deploying Python agents | [README](./base_python_docker/README.md) |
-| [Voiceflow Integration](./~voiceflow-dialog-api-integration~/) | Connect agents to Voiceflow Dialog API | [README](./~voiceflow-dialog-api-integration~/README.md) |
+| Folder | Description | Docs |
+|--------|-------------|------|
+| [templates/python-agent](./templates/python-agent/) | Starter FastAPI + Supabase agent template | [README](./templates/python-agent/README.md) |
+| [templates/n8n-agent](./templates/n8n-agent/) | Starter n8n agent workflow template | [README](./templates/n8n-agent/README.md) |
+| [docker/python-base](./docker/python-base/) | Shared Docker base image for Python agents | [README](./docker/python-base/README.md) |
+| [integrations/voiceflow](./integrations/voiceflow/) | Voiceflow Dialog API integration | [README](./integrations/voiceflow/README.md) |
 
 ---
 
@@ -86,15 +80,15 @@ cd Agents
 
 ### 2. Pick an agent
 
-Choose an agent from the table above and `cd` into its directory.
+Choose a folder from the tables above and `cd` into it.
 
 ### 3. Configure environment
 
-Most Python agents include a `.env.example` file:
+Python agents include a `.env.example` file:
 
 ```bash
 cp .env.example .env
-# Edit .env with your API keys (OpenAI, Supabase, GitHub, etc.)
+# Edit .env with your API keys
 ```
 
 ### 4. Install and run
@@ -118,30 +112,38 @@ Import the `*.json` workflow file into your n8n instance and configure credentia
 
 ```
 Agents/
-├── pydantic-github-agent/       # GitHub repo analysis (Pydantic AI)
-├── pydantic-ai-advanced-researcher/
-├── crawl4AI-agent/              # Doc crawler + RAG
-├── file-agent/
-├── n8n-expert/
-├── advanced-web-researcher/
-├── youtube-video-summarizer/
-├── ~sample-python-agent~/       # Starter templates
-├── ~sample-n8n-agent~/
-├── base_python_docker/
+├── github-agent/              # GitHub repo analysis (Python)
+├── web-researcher/            # Web search with Brave API (Python)
+├── doc-rag-agent/             # Documentation crawler + RAG (Python)
+├── file-agent/                # File upload agent (Python)
+├── n8n-workflow-finder/       # n8n workflow discovery
+├── github-assistant/          # GitHub assistant (n8n)
+├── n8n-web-researcher/        # Web research (n8n)
+├── youtube-summarizer/        # YouTube summarizer (n8n)
+├── tech-stack-advisor/        # Tech stack advisor (n8n)
+├── local-llm-advisor/         # Local LLM advisor (n8n)
+├── bolt-diy-advisor/          # bolt.diy advisor (n8n)
+├── social-content-creator/    # Social content creator (n8n)
+├── small-business-researcher/ # Business research (n8n)
+├── templates/
+│   ├── python-agent/          # Python agent starter template
+│   └── n8n-agent/             # n8n agent starter template
+├── docker/
+│   └── python-base/           # Shared Docker base image
+├── integrations/
+│   └── voiceflow/             # Voiceflow integration
+├── LICENSE
+├── CONTRIBUTING.md
 └── README.md
 ```
-
-Each agent folder is self-contained with its own `README.md`, dependencies, and configuration.
 
 ---
 
 ## Prerequisites
 
-Requirements vary by agent. Common dependencies include:
-
 | Tool | Used for |
 |------|----------|
-| Python 3.11+ | Pydantic AI and FastAPI agents |
+| Python 3.11+ | Python-based agents |
 | [n8n](https://n8n.io/) | Workflow-based agents |
 | [Supabase](https://supabase.com/) | Vector storage and conversation history |
 | OpenAI / OpenRouter / Brave API | LLM and search capabilities |
@@ -152,22 +154,13 @@ Check each agent's README for specific requirements.
 
 ## Contributing
 
-We welcome contributions from the community. Here's how to get started:
+We welcome contributions from the community. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 1. **Fork** the repository
-2. **Create a branch** for your feature or fix (`git checkout -b feature/my-new-agent`)
-3. **Add or improve an agent** — include a clear README with setup steps
+2. **Create a branch** (`git checkout -b feature/my-new-agent`)
+3. **Add or improve an agent** with a clear README
 4. **Test locally** before opening a PR
-5. **Open a Pull Request** with a description of what you changed and why
-
-### Contribution ideas
-
-- New agent templates (Python, n8n, or other frameworks)
-- Bug fixes and documentation improvements
-- Better error handling and examples
-- Translations and tutorials
-
-Please keep each agent self-contained and document all required environment variables.
+5. **Open a Pull Request**
 
 ---
 
@@ -175,13 +168,12 @@ Please keep each agent self-contained and document all required environment vari
 
 - **ChenAI Community** — [LinkedIn](https://www.linkedin.com/company/chenai/)
 - **Issues** — [GitHub Issues](https://github.com/MadhavanAR/Agents/issues)
-- **Discussions** — Use GitHub Discussions for questions and ideas (enable in repo settings)
 
 ---
 
 ## License
 
-This project is open source. Add a `LICENSE` file to specify terms (MIT is recommended for maximum adoption). Until a license is added, please contact the maintainers before using this code in production.
+Licensed under the [MIT License](LICENSE).
 
 ---
 
